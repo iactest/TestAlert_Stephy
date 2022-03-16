@@ -6,6 +6,7 @@ terraform {
     }
   }
 }
+
 resource "aws_s3_bucket" "mfadelete" {
   bucket = "examplebuckettftest"
   acl    = var.public

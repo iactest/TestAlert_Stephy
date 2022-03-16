@@ -24,7 +24,7 @@ variable "storage" {
   default = 10
 }
 variable "az" {
-  default = "us-west-2a"
+  default = "us-west-2b"
 }
 variable "size" {
   default = 40
