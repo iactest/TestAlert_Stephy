@@ -8,7 +8,7 @@ terraform {
 }
 provider "aws" {
   profile = "default"
-  region  = "us-west-24"
+  region  = "us-west-2"
 }
 resource "aws_instance" "ebs_optimized" {
   ami           = var.ami_id
