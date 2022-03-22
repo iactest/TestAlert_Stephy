@@ -7,7 +7,7 @@ terraform {
   }
 }
 
-resource "aws_s3_bucket" "mfadelete" {
+resource "aws_s3_bucket" "mfadelete_7" {
   bucket = "examplebuckettftest"
   acl    = var.public
   versioning {
@@ -31,7 +31,7 @@ EOF
   }
 }
 
-resource "aws_db_instance" "education" {
+resource "aws_db_instance" "education_7" {
     name                      = var.name
     instance_class            = var.class
     allocated_storage         = var.storage

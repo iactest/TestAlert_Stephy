@@ -2,7 +2,6 @@
 # Security group with name
 ##########################
 resource "aws_security_group" "sg" {
-   
    ingress {
            cidr_blocks = ["0.0.0.0/0"]
            from_port   = 80

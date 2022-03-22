@@ -5,7 +5,6 @@ terraform {
       version = "~> 3.0"
     }
   }
-}
 
 resource "aws_s3_bucket" "mfadelete" {
   bucket = "examplebuckettftest"

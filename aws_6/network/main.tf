@@ -1,7 +1,7 @@
 ##########################
 # Security group with name
 ##########################
-resource "aws_security_group" "sg" {
+resource "aws_security_group" "sg_4" {
    
    ingress {
            cidr_blocks = ["0.0.0.0/0"]

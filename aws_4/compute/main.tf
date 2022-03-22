@@ -12,7 +12,7 @@ provider "aws" {
   region  = "us-west-24"
 }
 
-resource "aws_instance" "ebs_optimized" {
+resource "aws_instance" "ebs_optimized_4" {
   ami           = var.ami_id
   instance_type = var.type
   #ebs_optimized = false
@@ -22,7 +22,7 @@ resource "aws_instance" "ebs_optimized" {
   }
 }
 
-resource "aws_ebs_volume" "example" {
+resource "aws_ebs_volume" "example_4" {
   availability_zone = "us-west-2a"
   size              = 40
   encrypted         = false
