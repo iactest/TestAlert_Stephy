@@ -21,6 +21,16 @@ resource "aws_instance" "ebs_optimized" {
   }
 }
 
+resource "aws_instance" "ebs_optimizedadd" {
+  ami           = var.ami_id
+  instance_type = var.type
+  #ebs_optimized = false
+  #monitoring = false
+  tags = {
+    Name = "ExampleAppServerInstance"
+  }
+}
+
 resource "aws_ebs_volume" "example" {
   availability_zone = "us-west-2a"
   size              = 40
