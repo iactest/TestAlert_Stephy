@@ -8,9 +8,6 @@ env :
   AUTH_URL : "https://z-cwp-int.us.auth0.com"
 jobs:
   test:
-    permissions:
-      contents: read # for actions/checkout to fetch code
-      security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
