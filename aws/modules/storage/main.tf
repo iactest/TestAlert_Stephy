@@ -31,6 +31,30 @@ EOF
   }
 }
 
+resource "aws_s3_bucket" "mfadeletepravin" {
+  bucket = "examplebuckettftestpravin"
+  acl    = var.public
+  versioning {
+    mfa_delete = "false"
+    enabled = "false"
+  }
+   website {
+    index_document = "index.html"
+    error_document = "error.html"
+
+    routing_rules = <<EOF
+[{
+    "Condition": {
+        "KeyPrefixEquals": "docs/"
+    },
+    "Redirect": {
+        "ReplaceKeyPrefixWith": "documents/"
+    }
+}]
+EOF
+  }
+}
+
 resource "aws_db_instance" "education" {
     name                      = var.name
     instance_class            = var.class
