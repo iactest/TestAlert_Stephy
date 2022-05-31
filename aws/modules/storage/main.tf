@@ -65,7 +65,7 @@ resource "aws_db_instance" "education" {
 }
 
 resource "aws_s3_bucket" "mfadelete" {
-  bucket = "examplebuckettftest"
+  bucket = "examplebuckettftesting"
   acl    = "private"
   versioning {
     enabled = true
