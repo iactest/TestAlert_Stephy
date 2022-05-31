@@ -63,3 +63,11 @@ resource "aws_db_instance" "education" {
     storage_encrypted         = false
     #kms_key_id = aws_kms_key.mykey.arn
 }
+resource "aws_s3_bucket" "mfadelete2" {
+  bucket = "examplebuckettftest2"
+  acl    = "private"
+  versioning {
+    enabled = true
+    mfa_delete = true
+  }
+}
